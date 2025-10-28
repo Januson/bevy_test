@@ -208,7 +208,7 @@ jobs:
         uses: Swatinem/rust-cache@v2
         with:
           shared-key: release
-          save-if: ${{ github.ref == 'refs/heads/main' }}
+          save-if: ${{ github.ref == 'refs/heads/master' }}
 
       - name: Install build dependencies (Linux)
         if: ${{ env.is_platform_enabled == 'true' && matrix.platform == 'linux' }}
